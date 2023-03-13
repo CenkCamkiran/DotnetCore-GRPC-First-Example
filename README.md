@@ -73,7 +73,11 @@ I didn't use any design patterns. This project is for learning about GRPC.
 
 ### GRPC Client
 
-- Details
+1. Connect to **GRPC Server**.
+2. Invoke **GetSalesData** Method without filter. I used deadline but you can change or remove it.
+3. Read messages until all the messages are fetched. Actually read excel file line by line (one row at a time) via GRPC Stream and print on console.
+4. If stream ended print total number of records from excel file that streamed via GRPC.
+5. If deadline or exception occurs print exception message
 
 ### GRPC Server
 
