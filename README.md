@@ -6,7 +6,7 @@ I was curious about GRPC. So I developed simple GRPC Client and Server projects 
 
 ## Philosophy
 
-Main goal is:  Develop a API that has GRPC. Stream large files for example excel files etc. In this project I used excel file.
+Main goal is: Develop a API that has GRPC. Stream large files for example excel files etc. In this project I used excel file.
 
 ## Contents
 
@@ -19,9 +19,10 @@ Main goal is:  Develop a API that has GRPC. Stream large files for example excel
     - [Docker installation](#docker-installation)
     - [Excel File to Stream Large Data](#excel-file-to-stream-large-data)
   - [Services (API Endpoints)](#services-api-endpoints)
-    - [`POST` /api/v1/main/Converter](#post-apiv1mainconverter)
+    - [GetSalesData Method](#getsalesdata-method)
   - [Business Logic](#business-logic)
-    - [Explain details?](#explain-details)
+    - [GRPC Client](#grpc-client)
+    - [GRPC Server](#grpc-server)
   - [Installation](#installation)
   - [Contributing](#contributing)
   - [Bug Reports \& Feature Requests](#bug-reports--feature-requests)
@@ -49,55 +50,38 @@ Docker Engine and Docker Compose must be installed. Check out on Docker's offica
 
 ## Services (API Endpoints)
 
-### `POST` /api/v1/main/Converter
+### GetSalesData Method
 
 **Parameters**
 
 |          Name | Required |  Type   | Description                                                                                                                                                           |
 | -------------:|:--------:|:-------:| --------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-|     `file` | required | Form Data  | <br/> MP4 file to upload to API <br/><br/>                                                                     |
-|     `email` | required | Form Data  | <br/> Email address to receive converted from MP4 file that sent to MP3 <br/><br/>                                                                     |
+|     n/a | n/a | n/a | <br/> n/a <br/><br/>                                                                     |
 
 **Response**
 
 ```
-//File uploaded succesfully
-{
-    "responseCode": 200,
-    "message": "File uploaded!",
-    "errorMessage": "",
-    "errorCode": 0
-}
-
-//File format error
-{
-    "ErrorMessage": "File format must be mp4!",
-    "ErrorCode": 400
-}
-
-//Error occurred while uploading the file
-{
-    "ErrorMessage": "Some error text",
-    "ErrorCode": 500
-}
+Content of Excel file will be streamed to client. You can see from console.
 ```
 
-<!-- > **Note** <br />
-> :exclamation: :exclamation: :exclamation:  :exclamation: :exclamation: :exclamation: <br /> -->
+> **Note** <br />
+> :exclamation: :exclamation: :exclamation: I used deadline as 5 seconds from Now. You can remove it or change it to whatever you want :exclamation: :exclamation: :exclamation: <br />
 
 ## Business Logic
 
-I used CQRS Design Pattern Web Service and other Microservices.
+I didn't use any design patterns. This project is for learning about GRPC.
 
-### Explain details?
+### GRPC Client
+
+- Details
+
+### GRPC Server
 
 - Details
 
 ## Installation
 
-<!-- At the root of project, there is a folder called **'YAML-Files'**. Each folder name represents technologies that I used in this project. In that folders, there are docker-compose files corresponds to each related folder. Use them to install on **Docker Compose**.
-
-To install the Microservices, go to **Microservices folder** and each Microservice are represented as folder name. Inside of that folders there is **docker-compose** file. Use them via creating **.env** file in your workspace or whatever you want! -->
+Explain via Docker?
 
 ## Contributing
 
@@ -109,4 +93,4 @@ Please use the Github issues.
 
 ## RoadMap
 
-- I want to learn more deatils about GRPC.
+- I want to learn more details about GRPC.
