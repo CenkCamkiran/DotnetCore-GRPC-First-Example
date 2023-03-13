@@ -1,24 +1,24 @@
-# First Example of Dotnet Core 6 GRPC
+# First Example of Dotnet Core 6 GRPC (Client And Server)
 
 ## Abstract
 
-I was curious about GRPC. So I developed simple GRPC via **.NET Core 6**.
+I was curious about GRPC. So I developed simple GRPC Client and Server projects via **.NET Core 6**.
 
 ## Philosophy
 
-Main goal is:  Develop GRPC stream to stream large files like excel files.
+Main goal is:  Develop a API that has GRPC. Stream large files for example excel files etc. In this project I used excel file.
 
 ## Contents
 
-- [First Example of Dotnet Core 6 GRPC](#first-example-of-dotnet-core-6-grpc)
+- [First Example of Dotnet Core 6 GRPC (Client And Server)](#first-example-of-dotnet-core-6-grpc-client-and-server)
   - [Abstract](#abstract)
   - [Philosophy](#philosophy)
   - [Contents](#contents)
   - [Features](#features)
   - [Requirements](#requirements)
     - [Docker installation](#docker-installation)
-  - [Controllers (API Endpoints)](#controllers-api-endpoints)
-    - [`GET` /api/v1/Health](#get-apiv1health)
+    - [Excel File to Stream Large Data](#excel-file-to-stream-large-data)
+  - [Services (API Endpoints)](#services-api-endpoints)
     - [`POST` /api/v1/main/Converter](#post-apiv1mainconverter)
   - [Business Logic](#business-logic)
     - [Explain details?](#explain-details)
@@ -30,46 +30,24 @@ Main goal is:  Develop GRPC stream to stream large files like excel files.
 ## Features
 
 - Developed via **.Net Core 6**
-- Uses **GRPC** for streaming large files
+- Uses **GRPC** for streaming large files for example excel file etc.
 
 ## Requirements
 
 > **Note** <br />
 > Currently I use **Docker version 20.10.21** and **Docker Compose version v2.6.0** <br />
-> Currently I use **Docker Compose version v2.12.2** <br />
 > Currently I use **Linux Ubuntu 18.06 LTS** machine on Google Cloud. <br />
 
 ### Docker installation
 
 Docker Engine and Docker Compose must be installed. Check out on Docker's offical site.
 
-<img src="./ProjectArch.png" >
+### Excel File to Stream Large Data
 
-## Controllers (API Endpoints)
+- Download excel file from this site: <https://eforexcel.com/wp/wp-content/uploads/2020/09/5m-Sales-Records.zip>
+- Move file to **"GRPC_Server/bin/Debug/net6.0 directory"**. Rename file as **"sales_records.csv"**
 
-### `GET` /api/v1/Health
-
-**Parameters**
-
-|          Name | Required |  Type   | Description                                                                                                                                                           |
-| -------------:|:--------:|:-------:| --------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-|     n/a | n/a | n/a | <br/> n/a <br/><br/>                                                                     |
-
-**Response**
-
-```
-
-//The tools that is used by webservice and microservices is running (online)
-{
-    "HostStatus": "Host is working!"
-}
-
-//The tools that is used by webservice and microservices is not running or online
-{
-    "HostStatus": "Host is not working!"
-}
-
-```
+## Services (API Endpoints)
 
 ### `POST` /api/v1/main/Converter
 
@@ -131,4 +109,4 @@ Please use the Github issues.
 
 ## RoadMap
 
-- Roadmap
+- I want to learn more deatils about GRPC.
