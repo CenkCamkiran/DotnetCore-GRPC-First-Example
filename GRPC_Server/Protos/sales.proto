@@ -1,7 +1,7 @@
-syntax = “proto3”;
-import “google/protobuf/timestamp.proto”;
+syntax = "proto3";
+import "google/protobuf/timestamp.proto";
 
-option csharp_namespace = “gRPCDemoUsingNET6.Protos”;
+option csharp_namespace = "Protos";
 
 package sales;
 

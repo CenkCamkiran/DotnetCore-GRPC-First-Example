@@ -2,11 +2,9 @@ using Grpc.Core;
 
 public class SalesDataService : Protos.SalesService.SalesServiceBase
 {
-    public override async Task
-    GetSalesData(Protos.Request request,
-    IServerStreamWriter<Protos.SalesDataModel> responseStream, ServerCallContext context)
+    public override async Task GetSalesData(Protos.Request request, IServerStreamWriter<Protos.SalesDataModel> responseStream, ServerCallContext context)
     {
-        using var reader = new StreamReader(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Data", "sales_records.csv"));
+        using var reader = new StreamReader(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "sales_records.csv"));
         string line; bool isFirstLine = true;
         while ((line = reader.ReadLine()) != null)
         {
