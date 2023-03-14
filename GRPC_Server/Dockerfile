@@ -5,6 +5,9 @@ WORKDIR /app
 EXPOSE 3080 #HTTP
 #EXPOSE 3443 #HTTPS
 
+RUN apt-get update -y & apt-get install unzip
+RUN unzip 5m-Sales-Records.zip & mv '5m Sales Records.csv' sales_records.csv
+
 FROM mcr.microsoft.com/dotnet/sdk:6.0 AS build
 WORKDIR /src
 COPY ["GRPCExample.csproj", "."]
