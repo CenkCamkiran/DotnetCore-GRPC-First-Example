@@ -137,7 +137,7 @@ Example Commands to build images:
 ```bash
 docker build -t cenkcamkiran/gcloud-projects:grpcexample_v1.0 . #build to use grpc server
 
-docker build -t cenkcamkiran/gcloud-projects:grpcclient_v1.0 . #bbuild to use grpc client
+docker build -t cenkcamkiran/gcloud-projects:grpcclient_v1.0 . #build to use grpc client
 
 ```
 
