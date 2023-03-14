@@ -129,7 +129,17 @@ message SalesDataModel { //Excel file model
 
 ## Installation
 
-Explain via Docker?
+- Use docker files to build docker images.
+- Use docker-compose files to run containers.
+
+Example Commands to build images:
+
+```bash
+docker build -t cenkcamkiran/gcloud-projects:grpcexample_v1.0 .
+
+docker build -t cenkcamkiran/gcloud-projects:grpcclient_v1.0 .
+
+```
 
 ## Contributing
 
