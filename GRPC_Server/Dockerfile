@@ -7,6 +7,7 @@ EXPOSE 3080
 
 RUN apt-get update
 RUN apt-get install unzip -y
+RUN apt-get install wget -y
 RUN wget https://eforexcel.com/wp/wp-content/uploads/2020/09/5m-Sales-Records.zip
 RUN unzip 5m-Sales-Records.zip
 RUN mv '5m Sales Records.csv' sales_records.csv
