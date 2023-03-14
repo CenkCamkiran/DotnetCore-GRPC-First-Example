@@ -4,7 +4,11 @@ using Grpc.Net.Client;
 using Protos;
 using System.Threading;
 
-var channel = GrpcChannel.ForAddress("https://localhost:7218");
+var grpcHost = Environment.GetEnvironmentVariable("GRPC_HOST");
+if (string.IsNullOrEmpty(grpcHost))
+    throw new Exception("GRPC_HOST env Variable not set!");
+
+var channel = GrpcChannel.ForAddress(grpcHost);
 //Create SalesService Client to open a connection
 var client = new SalesService.SalesServiceClient(channel);
 //Invoke the method 
