@@ -5,8 +5,10 @@ FROM mcr.microsoft.com/dotnet/aspnet:6.0 AS base
 WORKDIR /app
 EXPOSE 3080
 
-RUN apt-get update -y & apt-get install unzip
-RUN unzip 5m-Sales-Records.zip & mv '5m Sales Records.csv' sales_records.csv
+RUN apt-get update
+RUN apt-get install ffmpeg -y
+RUN unzip 5m-Sales-Records.zip
+RUN mv '5m Sales Records.csv' sales_records.csv
 
 FROM mcr.microsoft.com/dotnet/sdk:6.0 AS build
 WORKDIR /src
