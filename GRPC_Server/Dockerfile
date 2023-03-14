@@ -6,7 +6,7 @@ WORKDIR /app
 EXPOSE 3080
 
 RUN apt-get update
-RUN apt-get install ffmpeg -y
+RUN apt-get install unzip -y
 RUN unzip 5m-Sales-Records.zip
 RUN mv '5m Sales Records.csv' sales_records.csv
 
