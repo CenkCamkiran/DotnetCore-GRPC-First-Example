@@ -5,3 +5,5 @@ services:
     image: cenkcamkiran/gcloud-projects:grpcclient_v1.0
     restart: on-failure
     container_name: grpc_client
+    environment:
+      GRPC_HOST: ${GRPC_HOST}
