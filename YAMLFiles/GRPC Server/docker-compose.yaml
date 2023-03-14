@@ -1,0 +1,20 @@
+version: "3.9"
+
+services:
+  grpc_webservice:
+    image: cenkcamkiran/gcloud-projects:grpcexample_v1.0
+    #networks:
+    #- microservices
+    restart: on-failure
+    container_name: grpc_webservice
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ASPNETCORE_URLS: http://+:3080
+    ports:
+      - 3080:3080
+    #networks:
+      #default: null
+      
+#networks:
+  #default:
+    #name: kong_default
